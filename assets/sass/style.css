@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200&display=swap");
 body {
   line-height: 1.5;
   font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 * {
@@ -20,8 +26,48 @@ body {
   background: #fdf9ff;
   position: fixed;
   left: 0;
-  right: 0;
+  top: 0;
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 100%;
   z-index: 10;
+}
+.main_container .aside .logo {
+  position: absolute;
+  top: 30px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.main_container .aside .logo a {
+  color: #302e4d;
+  font-weight: 700;
+  padding: 15px 20px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.main_container .aside .logo a::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid #ec1839;
+  border-left: 5px solid #ec1839;
+  bottom: 0;
+  left: 0;
+}
+.main_container .aside .logo a::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid #ec1839;
+  border-right: 5px solid #ec1839;
+  top: 0;
+  right: 0;
 }
 .main_container .main_content .section {
   background: #f2f2fc;
@@ -31,5 +77,6 @@ body {
   left: 270px;
   top: 0;
   right: 0;
+  z-index: 0;
   opacity: 1;
 }/*# sourceMappingURL=style.css.map */

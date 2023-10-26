@@ -4,8 +4,48 @@
         background: $bg-black-100;
         position: fixed;
         left: 0;
-        right: 0;
+        top: 0;
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 100%;
         z-index: 10;
+        .logo{
+            position: absolute;
+            top: 30px;
+            font-size: 30px;
+            text-transform: capitalize;
+            a{
+                color:$text-black-900;
+                font-weight: 700;
+                padding: 15px 20px;
+                font-size: 30px;
+                letter-spacing: 2px;
+                font-weight: 700;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-bottom: 5px solid $skin-color;
+                    border-left: 5px solid $skin-color;
+                    bottom: 0;
+                    left: 0;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-top: 5px solid $skin-color;
+                    border-right: 5px solid $skin-color;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
     }
     .main_content{
         .section {
@@ -16,8 +56,8 @@
             left: 270px;
             top: 0;
             right: 0;
+            z-index: 0;
             opacity: 1;
         }
     }
 }
-
