@@ -29,11 +29,51 @@ ul {
   top: 0;
   padding: 30px;
   height: 100%;
+  border-right: 1px solid #e8dfec;
   display: flex;
   align-items: center;
   justify-content: center;
   right: 100%;
   z-index: 10;
+}
+.main_container .aside .nav_toggler {
+  height: 40px;
+  width: 45px;
+  border: 1px solid #e8dfec;
+  cursor: pointer;
+  position: fixed;
+  left: 300px;
+  top: 20px;
+  border-radius: 5px;
+  background: #fdf9ff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.main_container .aside .nav_toggler span {
+  height: 2px;
+  width: 18px;
+  background: #ec1839;
+  display: inline-block;
+  position: relative;
+}
+.main_container .aside .nav_toggler span::before {
+  content: "";
+  height: 2px;
+  width: 18px;
+  background: #ec1839;
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+.main_container .aside .nav_toggler span::after {
+  content: "";
+  height: 2px;
+  width: 18px;
+  background: #ec1839;
+  position: absolute;
+  top: 6px;
+  left: 0;
 }
 .main_container .aside .logo {
   position: absolute;
@@ -69,6 +109,24 @@ ul {
   top: 0;
   right: 0;
 }
+.main_container .aside .nav {
+  margin-top: 50px;
+}
+.main_container .aside .nav li {
+  margin-bottom: 20px;
+  display: block;
+}
+.main_container .aside .nav li a {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  border-bottom: 1px solid #e8dfec;
+  color: #302e4d;
+  padding: 5px 15px;
+}
+.main_container .aside .nav li a i {
+  margin-right: 15px;
+}
 .main_container .main_content .section {
   background: #f2f2fc;
   min-height: 100vh;
@@ -79,4 +137,8 @@ ul {
   right: 0;
   z-index: 0;
   opacity: 1;
+}
+
+.aside .nav li a.active {
+  color: #ec1839;
 }/*# sourceMappingURL=style.css.map */

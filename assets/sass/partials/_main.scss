@@ -7,25 +7,69 @@
         top: 0;
         padding: 30px;
         height: 100%;
+        border-right: 1px solid $bg-black-50;
         display: flex;
         align-items: center;
         justify-content: center;
         right: 100%;
         z-index: 10;
-        .logo{
+
+        .nav_toggler {
+            height: 40px;
+            width: 45px;
+            border: 1px solid $bg-black-50;
+            cursor: pointer;
+            position: fixed;
+            left: 300px;
+            top: 20px;
+            border-radius: 5px;
+            background: $bg-black-100;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            span{
+                height: 2px;
+                width: 18px;
+                background: $skin-color;
+                display:inline-block;
+                position: relative;
+                &::before{
+                    content: '';
+                    height: 2px;
+                    width: 18px;
+                    background:$skin-color;
+                    position: absolute;
+                    top: -6px;
+                    left: 0;
+                }
+                &::after{
+                    content: '';
+                    height: 2px;
+                    width: 18px;
+                    background:$skin-color;
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                }
+            }
+        }
+
+        .logo {
             position: absolute;
             top: 30px;
             font-size: 30px;
             text-transform: capitalize;
-            a{
-                color:$text-black-900;
+
+            a {
+                color: $text-black-900;
                 font-weight: 700;
                 padding: 15px 20px;
                 font-size: 30px;
                 letter-spacing: 2px;
                 font-weight: 700;
-                &::before{
-                    content: '';
+
+                &::before {
+                    content: "";
                     position: absolute;
                     width: 20px;
                     height: 20px;
@@ -34,8 +78,9 @@
                     bottom: 0;
                     left: 0;
                 }
-                &::after{
-                    content: '';
+
+                &::after {
+                    content: "";
                     position: absolute;
                     width: 20px;
                     height: 20px;
@@ -46,8 +91,31 @@
                 }
             }
         }
+
+        .nav {
+            margin-top: 50px;
+
+            li {
+                margin-bottom: 20px;
+                display: block;
+
+                a {
+                    font-size: 16px;
+                    font-weight: 600;
+                    display: block;
+                    border-bottom: 1px solid $bg-black-50;
+                    color: $text-black-900;
+                    padding: 5px 15px;
+
+                    i {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
     }
-    .main_content{
+
+    .main_content {
         .section {
             background: $bg-black-900;
             min-height: 100vh;
@@ -60,4 +128,11 @@
             opacity: 1;
         }
     }
+}
+
+.aside .nav li a.active {
+    color: $skin-color;
+}
+.home .home_img img{
+    height:400px;
 }
